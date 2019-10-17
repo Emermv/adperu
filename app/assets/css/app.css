@@ -1,0 +1,237 @@
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../iconfont/MaterialIcons-Regular.eot);
+  /* For IE6-8 */
+  src: local('Material Icons'), local('MaterialIcons-Regular'),
+  url(../iconfont/MaterialIcons-Regular.woff2)
+  format('woff2'),
+  url(../iconfont/MaterialIcons-Regular.woff)
+  format('woff'), url(../iconfont/MaterialIcons-Regular.ttf)
+  format('truetype');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Roboto Condensed Bold'), local('RobotoCondensed-Bold'), url(../fonts/Roboto-Condensed.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(../fonts/Roboto.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+.rc-font, h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto Condensed', 'Roboto', sans-serif;
+}
+:root{
+  overflow: hidden;
+}
+.dense-text-field .v-input__control{
+min-height: 30px !important;
+}
+
+.contact-form{
+    padding: 0 0 0 200px;
+}
+.about-text{
+  font-size: 4rem;
+}
+.marquee-stroke{
+  -webkit-text-stroke: 1px var(--primary);color:transparent;
+}
+
+.about-us-container{
+  padding:0 250px 0  50px;
+}
+.marquee-container{
+  position: relative;bottom:-180px;
+}
+.menu-item{
+  font-size: 8rem;line-height: 1;
+}
+.service-text{
+  font-size: 4rem;
+}
+.service-container{
+  padding:0 330px 0 50px;
+}
+.slider-next{
+  position: relative;
+  bottom:100px;
+  left:99%;
+  z-index: 999;
+}
+.slider-next i{
+font-size:4rem;
+}
+.footer-container{
+  position: absolute;
+  right: 20px;
+  bottom:60px;
+  z-index: 99;
+}
+main{
+  width:100%;
+}
+.contact-text-container{
+  position: absolute;
+  right: 20px;
+  bottom:200px;
+  text-align: right;
+}
+@media only screen and (max-width : 992px) {
+  .marquee-container{
+    bottom:-100px;
+  }
+  .footer-container{
+    bottom:30px;
+  }
+.contact-text-container{
+  bottom:80px;
+}
+  .about-us-container{
+    padding:0 0px 0  10px;
+  }
+  .contact-form{
+    padding: 0 20px 0 10px;
+}
+.about-text{
+  font-size: 1.7rem;
+}
+.marquee-stroke{
+  font-size: 2.2rem;
+}
+.menu-item{
+  font-size: 3.5rem;
+}
+.service-text{
+  font-size: 1.8rem;
+}
+.service-container{
+  padding:0 15px 0 15px;
+}
+.slider-next{
+  position: absolute;
+  bottom:100px;
+  right: -10px;
+  left: initial;
+}
+.slider-next i{
+  font-size:6rem;
+  }
+  .white-footer{
+    right: 20px;
+  }
+}
+  
+.vertical{
+  writing-mode: vertical-lr; 
+  transform: rotate(180deg);
+}
+.logo{
+  position: absolute;
+  right: 20px;
+  top: 50px;
+  height: 50px;
+  z-index: 99;
+}
+.menu-button{
+  top: 50px;
+  position: relative;
+}
+.bold{
+  font-weight: bold;
+}
+
+  /* label color */
+  .input-field label {
+    color:var(--dark);
+    font-weight: bold;
+  }
+  /* label focus color */
+  .input-field input[type=text]:focus + label {
+    color: #000;
+  }
+  /* label underline focus color */
+  .input-field input[type=text]:focus {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000;
+  }
+  /* valid color */
+  .input-field input[type=text].valid {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000;
+  }
+  /* invalid color */
+  .input-field input[type=text].invalid {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000;
+  }
+  /* icon prefix focus color */
+  .input-field .prefix.active {
+    color: #000;
+  }
+
+
+  .primary{
+    background-color:var(--primary) !important;
+  }
+  .primary-text{
+    color:var(--primary) !important;
+  }
+.menu-dialog{
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom:0;
+  background-color:var(--primary);
+}
+.slider img{
+  max-width: 100%;
+  min-height: 100%;
+}
+
+.slider{
+  height: 100%;
+  width: 100%;
+}
+.slider [slider-item]{
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
