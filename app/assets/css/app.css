@@ -36,29 +36,59 @@
 }
 
 @font-face {
-  font-family: 'Roboto Condensed';
+  font-family: 'Berthold';
   font-style: normal;
-  font-weight: 700;
-  src: local('Roboto Condensed Bold'), local('RobotoCondensed-Bold'), url(../fonts/Roboto-Condensed.woff2) format('woff2');
+  src: local('Berthold'), url(../fonts/Berthold.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 @font-face {
-  font-family: 'Roboto';
+  font-family: 'Helvetica-Neue-Bold';
   font-style: normal;
-  font-weight: 400;
-  src: local('Roboto'), local('Roboto-Regular'), url(../fonts/Roboto.woff2) format('woff2');
+  src: local('Helvetica-Neue-Bold'),url(../fonts/HelveticaNeueCyr-Bold.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Helvetica-Neue';
+  font-style: normal;
+  src: local('Helvetica-Neue'),url(../fonts/HelveticaNeueCyr-Roman.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Helvetica-Neue-Light';
+  font-style: normal;
+  src: local('Helvetica-Neue-Light'),url(../fonts/HelveticaNeueCyr-Light.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
-.rc-font, h1, h2, h3, h4, h5, h6 {
-  font-family: 'Roboto Condensed', 'Roboto', sans-serif;
+@font-face {
+  font-family: 'Helvetica-Neue-Medium';
+  font-style: normal;
+  src: local('Helvetica-Neue-Medium'),url(../fonts/HelveticaNeueCyr-Medium.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
+
+.b-font {
+  font-family: 'Berthold',arial;
+}
+.bold-font{
+font-family: 'Helvetica-Neue-Bold';
+}
+.light-font{
+  font-family: 'Helvetica-Neue-Light';
+  }
+  .regular-font{
+    font-family: 'Helvetica-Neue';
+  }
+  .medium-font{
+    font-family: 'Helvetica-Neue-Medium';
+  }
 :root{
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
-.dense-text-field .v-input__control{
-min-height: 30px !important;
+body{
+  font-family: 'Helvetica-Neue',arial;
 }
 
 .contact-form{
@@ -78,7 +108,7 @@ min-height: 30px !important;
   position: relative;bottom:-180px;
 }
 .menu-item{
-  font-size: 8rem;line-height: 1;
+  font-size: 9rem;line-height: 1;
 }
 .service-text{
   font-size: 4rem;
@@ -97,20 +127,54 @@ font-size:4rem;
 }
 .footer-container{
   position: absolute;
-  right: 20px;
-  bottom:60px;
+  right: 35px;
+  bottom:50px;
   z-index: 99;
+}
+.social-icons{
+  margin-bottom: 45px;
 }
 main{
   width:100%;
 }
 .contact-text-container{
   position: absolute;
-  right: 20px;
+  right: 35px;
   bottom:200px;
   text-align: right;
 }
+.about-secondary-text{
+  font-size: 2rem;
+}
+.about-text{
+  font-size: 5rem;
+  line-height: 1;
+}
+.contact-text-container span{
+  font-size: 1.8rem;
+}
+.service-collapsible{
+  width: 100%;
+}
+.service-collapsible .active .service-text{
+  color: var(--primary);
+}
+.service-collapsible .collapsible-header{
+  padding: 0;
+  border-bottom:none;
+}
+.collapsible.service-collapsible {
+  border:none;
+}
+.service-collapsible .collapsible-body{
+  border-bottom:1px solid var(--primary);
+  padding: 1rem 0;
+  max-width: 70%;
+}
 @media only screen and (max-width : 992px) {
+  .social-icons{
+    margin-bottom: 30px;
+  }
   .marquee-container{
     bottom:-100px;
   }
@@ -120,14 +184,17 @@ main{
 .contact-text-container{
   bottom:80px;
 }
+.contact-text-container span{
+  font-size: 1.2rem;
+}
   .about-us-container{
-    padding:0 0px 0  10px;
+    padding:0 20px 0  10px;
   }
   .contact-form{
     padding: 0 20px 0 10px;
 }
 .about-text{
-  font-size: 1.7rem;
+  font-size: 2.2rem;
 }
 .marquee-stroke{
   font-size: 2.2rem;
@@ -153,6 +220,9 @@ main{
   .white-footer{
     right: 20px;
   }
+  .about-secondary-text{
+    font-size: 1.2rem;
+  }
 }
   
 .vertical{
@@ -161,7 +231,7 @@ main{
 }
 .logo{
   position: absolute;
-  right: 20px;
+  right: 35px;
   top: 50px;
   height: 50px;
   z-index: 99;
@@ -234,4 +304,29 @@ main{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+}
+.marquee div {
+  display: block;
+  width: 200%;
+  height: 30px;
+
+  position: absolute;
+  overflow: hidden;
+
+  animation: marquee 5s linear infinite;
+}
+
+.marquee span {
+  float: left;
+  width: 50%;
+}
+
+@keyframes marquee {
+  0% { left: 0; }
+  100% { left: -100%; }
+}
+
+.marquee:hover div {
+  -webkit-animation-play-state: paused; /* Safari 4.0 - 8.0 */
+    animation-play-state: paused;
 }

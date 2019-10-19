@@ -11,7 +11,7 @@
   <meta name="og:title" property="og:title" content="AD PERU">
   <meta name="robots" content="index, follow">
   <title><?php echo $title; ?></title>
-  <link rel="icon" href="app/assets/img/logo.png" />
+  <link rel="icon" href="favicon.ico" />
   <link href='app/assets/css/materialize.min.css' rel="stylesheet">
   <link href='app/assets/css/animate.css' rel="stylesheet">
 
@@ -27,19 +27,19 @@
       <a cursor="pointer" class="menu-button dark-text" onclick="toogle_dialog()"><i
           class="material-icons ">menu</i></a>
       <div class="md-layout md-flex-100 md-align-center md-vertical-align-end" >
-        <ul>
+        <ul class="social-icons">
           <li class="center-align">
             <a href="<?php echo $RS["LINKEDIN"]; ?>" target="_blank" class="dark-text"> <strong
-                class="vertical">Linkedin</strong></a>
+                class="vertical regular-font">Linkedin</strong></a>
           </li>
           <li class="center-align">
             <a href="<?php echo $RS["INSTAGRAM"]; ?>" target="_blank" class="dark-text"> <strong
-                class="vertical">Instagram &#8212;</strong></a>
+                class="vertical regular-font">Instagram &#8212;</strong></a>
 
           </li>
           <li class="center-align">
             <a href="<?php echo $RS["FACEBOOK"]; ?>" target="_blank" class="dark-text"><strong
-                class="vertical ">Facebook &#8212;</strong></a>
+                class="vertical regular-font ">Facebook &#8212;</strong></a>
           </li>
         </ul>
       </div>

@@ -8,27 +8,27 @@
                           <div class="row">
                             <div class="input-field col s12 m6 l6">
                                     <i class="material-icons prefix">account_circle</i>
-                              <input  id="name" type="text" class="validate">
+                              <input  id="name" type="text" class="validate" onfocus="toogleLogo()">
                               <label for="name">Nombre</label>
                             </div>
                             <div class="input-field col s12 m6 l6">
                                     <i class="material-icons prefix">account_circle</i>
-                              <input id="last_name" type="text" class="validate" >
+                              <input id="last_name" type="text" class="validate"  onfocus="toogleLogo()">
                               <label for="last_name">Apellidos</label>
                             </div>
                             <div class="input-field col s12 m6 l6">
                                     <i class="material-icons prefix">phone</i>
-                                <input id="phone" type="tel" class="validate" >
+                                <input id="phone" type="tel" class="validate"  onfocus="toogleLogo()">
                                 <label for="phone">Teléfono</label>
                               </div>
                             <div class="input-field col s12 m6 l6">
                                     <i class="material-icons prefix">email</i>
-                                <input id="email" type="email" class="validate" >
+                                <input id="email" type="email" class="validate"  onfocus="toogleLogo()">
                                 <label for="email">Correo</label>
                             </div>
                             <div class="input-field col s12 m12 l12">
                                     <i class="material-icons prefix">comment</i>
-                                    <textarea id="message" class="materialize-textarea"></textarea>
+                                    <textarea id="message" class="materialize-textarea"  onfocus="toogleLogo()"></textarea>
                                     <label for="message">Mensaje</label>
                                  </div>
                                  <div class="col s12 m12 l12 ">

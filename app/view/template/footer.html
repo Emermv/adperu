@@ -3,11 +3,11 @@
 <div class="md-layout md-align-end">
 
 <div class="md-layout md-flex-100 md-align-end">
-        <span style="font-weight: 500;" >© 2019 ADPERÚ </span>
+        <span style="line-height:1;font-size: .95rem;" >2019 ©AdPerú </span>
 </div>
 <div class="md-layout md-flex-100 md-align-end ">
         
-               <span style="font-weight: 500;"> Todos los derechos reservados.</span>
+               <span style="line-height:1;font-size: .8rem;"> Todos los derechos reservados.</span>
     
 </div>
 

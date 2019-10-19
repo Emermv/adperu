@@ -5,32 +5,31 @@
                   <a cursor="pointer" class="menu-button dark-text bold" onclick="toogle_dialog()"><i
                               class="material-icons ">close</i></a>
             </div>
-            <div class="md-layout md-flex-95 md-flex-small-85 md-flex-medium-85 md-vertical-align-center"
-                  style="height: 100vh;">
+            <div class="md-layout md-flex-95 md-flex-small-85 md-flex-medium-85 md-vertical-align-center" auto-height style="height: calc(100vh - 50px);">
                   <div class="md-layout md-flex-100">
                         <div class="md-layout md-flex-100">
-                              <a href="about_us"><span class="dark-text rc-font  menu-item">nosotros</span></a>
+                              <a href="about_us"><span class="dark-text bold-font  menu-item">nosotros</span></a>
                         </div>
                         <div class="md-layout md-flex-100">
-                              <a href="service"> <span class="dark-text rc-font  menu-item">servicios</span></a>
+                              <a href="service"> <span class="dark-text bold-font  menu-item">servicios</span></a>
                         </div>
                         <div class="md-layout md-flex-100">
-                              <a href="contact"><span class="dark-text rc-font  menu-item">contacto</span></a>
+                              <a href="contact"><span class="dark-text bold-font  menu-item">contacto</span></a>
                         </div>
-
-                        <div class="md-layout md-flex-15 md-flex-small-100 md-align-center md-align-small-start">
+                        
+                        <div class="md-layout md-flex-10 md-flex-small-100 md-align-start ">
                               <a  href="<?php echo $RS["FACEBOOK"]; ?>" target="_blank">
-                              <span class="rc-font dark-text" style="font-size:2rem;">facebook</span></a>
+                              <span class="bold-font dark-text" style="font-size:2rem;">facebook</span></a>
 
                         </div>
-                        <div class="md-layout md-flex-15 md-flex-small-100 md-align-center md-align-small-start">
+                        <div class="md-layout md-flex-20 md-flex-small-100 md-align-center md-align-small-start ">
                                     <a  href="<?php echo $RS["INSTAGRAM"]; ?>" target="_blank">
-                              <span class="rc-font dark-text" style="font-size:2rem;">instagram</span>
+                              <span class="bold-font dark-text" style="font-size:2rem;">instagram</span>
                               </a>
                         </div>
-                        <div class="md-layout md-flex-15 md-flex-small-100 md-align-center md-align-small-start">
-                                    <a href="{$RS.LINKEDIN" target="_blank" >
-                              <span class="rc-font dark-text" style="font-size:2rem;">linkedin</span>
+                        <div class="md-layout md-flex-10 md-flex-small-100 md-align-center md-align-small-start ">
+                                    <a href="<?php echo $RS["LINKEDIN"]; ?>" target="_blank" >
+                              <span class="bold-font dark-text" style="font-size:2rem;">linkedin</span>
                         </a>
                         </div>
                     
@@ -40,9 +39,9 @@
             </div>
       </div>
       <div class="contact-text-container">
-           <span style="font-size: 1.5rem;"> Jr Monterrey 389,<br> Chacarilla del Estanque,<br> Surco-Lima, Perú.<br><br></span>
-           <span style="font-size: 1.5rem;" class="bold">+51 13720253<br></span>
-            <span style="font-size: 1.5rem;" class="bold">+51 12670507</span>
+           <span> Jr Monterrey 389,<br> Chacarilla del Estanque,<br> Surco-Lima, Perú.<br><br></span>
+           <span class="bold-font">+51 13720253<br></span>
+            <span class="bold-font">+51 12670507</span>
       </div>
       <?php require $this->checkTemplate("template/footer");?>
 </div>

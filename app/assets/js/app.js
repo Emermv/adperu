@@ -1,4 +1,26 @@
 
+  
+  document.addEventListener('DOMContentLoaded', function() {
+    /* var els=document.querySelectorAll("[auto-height]");
+     els.forEach(element=>{
+       element.style.height=(window.innerHeight)+"px";
+     });*/
+     var elems = document.querySelectorAll('.collapsible');
+    var instances = M.Collapsible.init(elems, {});
+  });
+  function toogleLogo(hide=true){
+    document.querySelectorAll(".logo").forEach(el=>{
+               if(hide){
+                if(!el.classList.contains("hide")){
+                  el.classList.add("hide");
+                }
+               }else{
+                 if(el.classList.contains("hide")){
+                  el.classList.remove("hide");
+                 }
+               }
+    });
+  }
   function toogle_dialog(){
    var  dialog=document.getElementById("menu-dialog");
    if (dialog.classList.contains('hide')){
