@@ -150,8 +150,10 @@ main{
   font-size: 5rem;
   line-height: 1;
 }
-.contact-text-container span{
+.contact-text-container p{
   font-size: 1.8rem;
+  line-height: 1;
+  margin: 0;
 }
 .service-collapsible{
   width: 100%;
@@ -170,59 +172,6 @@ main{
   border-bottom:1px solid var(--primary);
   padding: 1rem 0;
   max-width: 70%;
-}
-@media only screen and (max-width : 992px) {
-  .social-icons{
-    margin-bottom: 30px;
-  }
-  .marquee-container{
-    bottom:-100px;
-  }
-  .footer-container{
-    bottom:30px;
-  }
-.contact-text-container{
-  bottom:80px;
-}
-.contact-text-container span{
-  font-size: 1.2rem;
-}
-  .about-us-container{
-    padding:0 20px 0  10px;
-  }
-  .contact-form{
-    padding: 0 20px 0 10px;
-}
-.about-text{
-  font-size: 2.2rem;
-}
-.marquee-stroke{
-  font-size: 2.2rem;
-}
-.menu-item{
-  font-size: 3.5rem;
-}
-.service-text{
-  font-size: 1.8rem;
-}
-.service-container{
-  padding:0 15px 0 15px;
-}
-.slider-next{
-  position: absolute;
-  bottom:100px;
-  right: -10px;
-  left: initial;
-}
-.slider-next i{
-  font-size:6rem;
-  }
-  .white-footer{
-    right: 20px;
-  }
-  .about-secondary-text{
-    font-size: 1.2rem;
-  }
 }
   
 .vertical{
@@ -329,4 +278,76 @@ main{
 .marquee:hover div {
   -webkit-animation-play-state: paused; /* Safari 4.0 - 8.0 */
     animation-play-state: paused;
+}
+
+[auto-height]{
+  overflow-y: auto;
+}
+.main-container{
+  padding-left: 81px;
+}
+@media only screen and (max-width : 992px) {
+.logo,.menu-button{
+top: 25px;
+}
+.logo{
+  height: 30px;
+}
+.main-container{
+  padding-left: 53.44px;
+}
+  .service-collapsible .collapsible-body{
+    max-width: 95%;
+  }
+  .social-icons{
+    margin-bottom: 30px;
+  }
+  .marquee-container{
+    bottom:0;
+  }
+  .footer-container{
+    bottom:30px;
+  }
+.contact-text-container{
+  bottom:80px;
+}
+.contact-text-container p{
+  font-size: 1.2rem;
+}
+  .about-us-container{
+    padding:0 20px 0  10px;
+  }
+  .contact-form{
+    padding: 0 20px 0 10px;
+}
+.about-text{
+  font-size: 2.2rem;
+}
+.marquee-stroke{
+  font-size: 2.2rem;
+}
+.menu-item{
+  font-size: 3rem;
+}
+.service-text{
+  font-size: 1.8rem;
+}
+.service-container{
+  padding:0 15px 0 15px;
+}
+.slider-next{
+  position: absolute;
+  bottom:100px;
+  right: -10px;
+  left: initial;
+}
+.slider-next i{
+  font-size:6rem;
+  }
+  .white-footer{
+    right: 20px;
+  }
+  .about-secondary-text{
+    font-size: 1.2rem;
+  }
 }

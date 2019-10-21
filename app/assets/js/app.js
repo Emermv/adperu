@@ -1,10 +1,10 @@
 
   
   document.addEventListener('DOMContentLoaded', function() {
-    /* var els=document.querySelectorAll("[auto-height]");
+    var els=document.querySelectorAll("[auto-height]");
      els.forEach(element=>{
        element.style.height=(window.innerHeight)+"px";
-     });*/
+     });
      var elems = document.querySelectorAll('.collapsible');
     var instances = M.Collapsible.init(elems, {});
   });
@@ -43,7 +43,7 @@
 
   class Slider{
      el;
-     interval=5000;
+     time=5000;
      active=0;
      isDesktop=(window.innerWidth > 960);
       img_mode=false;
@@ -91,9 +91,7 @@
     if(this.el){
       this.items=this.el.querySelectorAll("[slider-item]");
       this.built();
-   setInterval(()=>{
-  this.next();
-   },this.interval);
+      this.play();
  window.onresize= (e) => {
     if (window.innerWidth <= 960) {
       if (!this.isDesktop) return;
@@ -116,15 +114,23 @@
 built(){
   var i=0;
   this.items.forEach(item=>{
-    if(this.img_mode){
-      var img=document.createElement("img");
-      if(window.innerWidth>960){
-        this.setAttr(img,"src",this.getAttr(item,"on-desktop"));
-      }else{
-        this.setAttr(img,"src",this.getAttr(item,"on-small"));
-      }
+    item.onmouseover=(e)=>{
+       this.pause();
+    };
+    item.onmouseout=(e)=>{
+        this.play(true);
+    };
+    if(this.isset(item,'video')){
+      var video=document.createElement("video");
+      var source=document.createElement("source");
+      this.setAttr(video,"height",window.innerHeight);
+      this.setAttr(video,'width','100%');
+      this.setAttr(video,'controls',true);
+      this.setAttr(source,'src',this.getAttr(item,'video'));
+      this.setAttr(source,'type',"video/mp4");
+      video.appendChild(source);
       this.empty(item);
-      item.appendChild(img);
+      item.appendChild(video);
     }else{
       if(window.innerWidth>960){
         this.setCss(item,{'background-image':'url('+this.getAttr(item,"on-desktop")+')'});
@@ -139,6 +145,20 @@ built(){
    }
   });
 }
+pause(){
+clearInterval(this.interval);
+
+}
+play(handle_next=false){
+  if(handle_next){
+    setTimeout(()=>{
+      this.next();
+    },1000);
+  }
+  this.interval=setInterval(()=>{
+    this.next();
+     },this.time);
+}
     next(){
      // console.log("hide",this.active);
       this.setCss(this.items[this.active],{display:"none"});
@@ -151,6 +171,8 @@ built(){
         this.setAttr(this.items[this.active],"active");
         this.setCss(this.items[this.active],{display:"block"});
         this.addClass(this.items[this.active],"animated");
+            this.autoplayVideo(this.active);
+
        }else{
         this.active=0;
            //console.log("show first",this.active);
@@ -158,12 +180,58 @@ built(){
          this.setAttr(this.items[this.active],"active");
          this.setCss(this.items[this.active],{display:"block"});
          this.addClass(this.items[this.active],"animated");
+         this.autoplayVideo(this.active);
+       
        }
 
-
-
+    }
+    autoplayVideo(active){
+      if(this.isset(this.items[active],'video')){
+        var video=this.items[active].querySelector("video");
+        video.play();
+      }
     }
   }
 
   var slider=new Slider("slider");
   slider.run();
+
+  function  send_contact(form,event){
+   event.preventDefault();
+   const formSerialize = formElement => {
+    const values = new FormData();
+    const inputs = formElement.elements;
+  
+    for (let i = 0; i < inputs.length; i++) {
+     if(inputs[i].name!=""){
+      values.append(inputs[i].name,inputs[i].value);
+     }
+    }
+    return values;
+  }
+  
+  
+  var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      try{
+        var data=JSON.parse(xhttp.responseText);
+        console.log(data)
+        if(data){
+          var message=document.getElementById("responseText");
+          if(data.state){
+            message.classList.add("alert-info");
+          }else{
+            message.classList.add("alert-danger");
+          }
+           
+           message.innerHTML="<strong>"+data.message+"</strong>";
+        }
+
+      }catch(err){console.error(err)}
+    }
+};
+xhttp.open("POST",'send_mail', true);
+xhttp.send(formSerialize(form));
+  
+  }

@@ -25,7 +25,7 @@ elseif (strpos($class,'Rain\\Tpl') !== false):
 
     // require the file
     require_once $abs_path;
-elseif(strpos($class,'PHPMailer') !== false):
+elseif(strpos($class,'PHPMailer') !== false or strpos($class,'SMTP') !== false):
   
     $filename = dirname(__DIR__)."/core/libs/PHPMailer/class.".strtolower($class).'.php';
     require $filename;

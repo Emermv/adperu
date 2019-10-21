@@ -21,9 +21,8 @@
 </head>
 <body>
 
-  <div class="md-layout">
     <div class="md-layout md-flex-5 md-flex-small-15 md-flex-medium-15 primary md-align-center"
-      style="border-right: 1px  solid rgb(221, 13, 69);height: 100vh;">
+      style="border-right: 1px  solid rgb(221, 13, 69);height: 100vh;z-index: 999;position: fixed;">
       <a cursor="pointer" class="menu-button dark-text" onclick="toogle_dialog()"><i
           class="material-icons ">menu</i></a>
       <div class="md-layout md-flex-100 md-align-center md-vertical-align-end" >
@@ -44,13 +43,12 @@
         </ul>
       </div>
     </div>
-    <div class="md-layout md-flex-95 md-flex-small-85 md-flex-medium-85">
-      <main>
+    <div class="md-layout md-flex-100 main-container">
+      <main >
         {$view}
       </main>
     </div>
 
-  </div>
   {include="template/dialog-menu"}
 </body>
 <script src="app/assets/js/materialize.min.js"></script>

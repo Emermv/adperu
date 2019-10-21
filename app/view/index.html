@@ -10,15 +10,19 @@
 <div class="md-layout md-flex-80 md-flex-small-100 " style="height: 100vh;">
   <div id="slider" class="slider">
     {loop="$images"}
-      {if="$counter==0"}
-      <div slider-item active on-desktop="{$value.src}" on-small="{$value.small}" class="fadeInRight">
-
-      </div>
-      {else}
-      <div slider-item on-desktop="{$value.src}" on-small="{$value.small}"   class="fadeInRight">
-
-      </div>
-      {/if}
+     {if="isset($value.is_video) && $value.is_video"}
+     {if="$counter==0"}
+     <div slider-item active video="{$value.src}" class="fadeInRight"></div>
+     {else}
+     <div slider-item video="{$value.src}"    class="fadeInRight"></div>
+     {/if}
+     {else}
+     {if="$counter==0"}
+     <div slider-item active on-desktop="{$value.src}" on-small="{$value.small}" class="fadeInRight"></div>
+     {else}
+     <div slider-item on-desktop="{$value.src}" on-small="{$value.small}"   class="fadeInRight"></div>
+     {/if}
+     {/if}
     {/loop}
     <div class="slider-next">
         <i class="material-icons primary-text " cursor="pointer" onclick="slider.next()">navigate_next</i>

@@ -1,38 +1,44 @@
 {include="template/logo"}
-<div class="md-layout md-vertical-align-center fadeInRight animated" style="height: 100vh;">
+<div class="md-layout md-vertical-align-center fadeInRight animated" auto-height>
        
       
                 <div class="row contact-form ">
-                        <form class="col s12 m8 l8 ">
+                        
+                        <form class="col s12 m8 l8 " onsubmit="send_contact(this,event)">
                                 <div class="card z-depth-0 " >
                           <div class="row">
+                                        <div class="col s12 m12 l12">
+                                            <div class="alert  b-font" id="responseText" >
+                                               
+                                            </div>
+                                        </div>
                             <div class="input-field col s12 m6 l6">
                                     <i class="material-icons prefix">account_circle</i>
-                              <input  id="name" type="text" class="validate" onfocus="toogleLogo()">
+                              <input  id="name" name="name" type="text" class="validate" onfocus="toogleLogo()" required>
                               <label for="name">Nombre</label>
                             </div>
                             <div class="input-field col s12 m6 l6">
                                     <i class="material-icons prefix">account_circle</i>
-                              <input id="last_name" type="text" class="validate"  onfocus="toogleLogo()">
+                              <input id="last_name" name="last_name" type="text" class="validate"  onfocus="toogleLogo()">
                               <label for="last_name">Apellidos</label>
                             </div>
                             <div class="input-field col s12 m6 l6">
                                     <i class="material-icons prefix">phone</i>
-                                <input id="phone" type="tel" class="validate"  onfocus="toogleLogo()">
+                                <input id="phone" name="phone" type="tel" class="validate"  onfocus="toogleLogo()" required>
                                 <label for="phone">Teléfono</label>
                               </div>
                             <div class="input-field col s12 m6 l6">
                                     <i class="material-icons prefix">email</i>
-                                <input id="email" type="email" class="validate"  onfocus="toogleLogo()">
+                                <input id="email" type="email" name="email" class="validate"  required onfocus="toogleLogo()">
                                 <label for="email">Correo</label>
                             </div>
                             <div class="input-field col s12 m12 l12">
                                     <i class="material-icons prefix">comment</i>
-                                    <textarea id="message" class="materialize-textarea"  onfocus="toogleLogo()"></textarea>
+                                    <textarea id="message" name="message" class="materialize-textarea"  onfocus="toogleLogo()" required></textarea>
                                     <label for="message">Mensaje</label>
                                  </div>
                                  <div class="col s12 m12 l12 ">
-                                        <button class="btn waves-effect waves-light right primary z-depth-0 bold"  type="submit" name="action">ENVIAR
+                                        <button class="btn waves-effect waves-light right primary z-depth-0 bold"  type="submit" >ENVIAR
                                                 <i class="material-icons right">send</i>
                                          </button>
                                  </div>
@@ -43,10 +49,7 @@
                         </div>
                       </div>
                   
-                    
- {include="template/footer"}
-                    
-     
-                 
-       
+                <div class="hide-on-med-and-down">
+                                {include="template/footer"}
+                </div>
 </div>

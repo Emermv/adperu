@@ -2,7 +2,7 @@
 
 const APP=array(
   'TITLE'=>'ADPERÚ COMMUNICATION GROUP',
-  'ROOT'=>'https://gofacturas.club/v1',
+  'ROOT'=>'https://gofacturas.club/adperu',
   'VERSION'=>'1.0',
   'DB'=>array(
   'HOST'=>'localhost',
