@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<?php if(!class_exists('Rain\Tpl')){exit;}?><!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
@@ -10,7 +10,7 @@
   <meta name="description" content="AD PERU">
   <meta name="og:title" property="og:title" content="AD PERU">
   <meta name="robots" content="index, follow">
-  <title>{$title}</title>
+  <title><?php echo $title; ?></title>
   <link rel="icon" href="favicon.ico" />
   <link href='app/assets/css/materialize.min.css' rel="stylesheet">
   <link href='app/assets/css/animate.css' rel="stylesheet">
@@ -28,16 +28,16 @@
       <div class="md-layout md-flex-100 md-align-center md-vertical-align-end" >
         <ul class="social-icons">
           <li class="center-align">
-            <a href="{$RS.LINKEDIN}" target="_blank" class="dark-text"> <strong
+            <a href="<?php echo $RS["LINKEDIN"]; ?>" target="_blank" class="dark-text"> <strong
                 class="vertical regular-font">Linkedin</strong></a>
           </li>
           <li class="center-align">
-            <a href="{$RS.INSTAGRAM}" target="_blank" class="dark-text"> <strong
+            <a href="<?php echo $RS["INSTAGRAM"]; ?>" target="_blank" class="dark-text"> <strong
                 class="vertical regular-font">Instagram &#8212;</strong></a>
 
           </li>
           <li class="center-align">
-            <a href="{$RS.FACEBOOK}" target="_blank" class="dark-text"><strong
+            <a href="<?php echo $RS["FACEBOOK"]; ?>" target="_blank" class="dark-text"><strong
                 class="vertical regular-font ">Facebook &#8212;</strong></a>
           </li>
         </ul>
@@ -45,11 +45,13 @@
     </div>
     <div class="md-layout md-flex-100 main-container">
       <main >
-        {$view}
+        <?php echo $view; ?>
+
       </main>
     </div>
 
-  {include="template/dialog-menu"}
+  <?php require $this->checkTemplate("template/dialog-menu");?>
+
 </body>
 <script src="app/assets/js/materialize.min.js"></script>
 <script src="app/assets/js/app.js"></script>

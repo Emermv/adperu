@@ -52,7 +52,9 @@ class Home extends \core\Module{
     }
 
     public function send_mail($args,$link){
-      
+      $args['logo']=APP['ROOT'].'/app/assets/img/logo-primary.png';
+      $args['favicon']=APP['ROOT']."/favicon.ico";
+
       $response=array(
         'state'=>false,
         'message'=>''
@@ -71,10 +73,9 @@ $mail->Port = 587;                                    // TCP port to connect to
         $mail->addAddress("contacto@adperu.com"); 
         $mail->addAddress("sistemas@adperu.com"); 
         $mail->isHTML(true); 
-        $mail->Subject ="CONTACTO WEB ADPERÚ";
-        $args['logo']=APP['ROOT'].'/app/assets/logo-primary.png';
-        $args['favicon']=APP['ROOT']."/favicon.ico";
-        $mail->Body =$this->render($args,true);
+        $mail->Subject ="CONTACTO WEB ADPERU";
+      
+        $mail->Body =utf8_encode($this->render($args,true));
         $mail->AltBody = "This is the plain text version of the email content";
         if(!$mail->send()):
           $response['message']="Mailer Error: " . $mail->ErrorInfo;

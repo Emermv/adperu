@@ -1,0 +1,48 @@
+<?php if(!class_exists('Rain\Tpl')){exit;}?><div class="menu-dialog hide  " id="menu-dialog">
+      <?php require $this->checkTemplate("template/logo");?>
+      <div class="md-layout">
+            <div class="md-layout md-flex-5 md-flex-small-15 md-flex-medium-15 primary md-align-center">
+                  <a cursor="pointer" class="menu-button dark-text bold" onclick="toogle_dialog()"><i
+                              class="material-icons ">close</i></a>
+            </div>
+            <div class="md-layout md-flex-95 md-flex-small-85 md-flex-medium-85 md-vertical-align-center" style="height: calc(100vh - 50px);">
+                  <div class="md-layout md-flex-100">
+                        <div class="md-layout md-flex-100">
+                              <a href="about_us"><span class="dark-text bold-font  menu-item">nosotros</span></a>
+                        </div>
+                        <div class="md-layout md-flex-100">
+                              <a href="service"> <span class="dark-text bold-font  menu-item">servicios</span></a>
+                        </div>
+                        <div class="md-layout md-flex-100">
+                              <a href="contact"><span class="dark-text bold-font  menu-item">contacto</span></a>
+                        </div>
+                        
+                        <div class="md-layout md-flex-10 md-flex-small-100 md-align-start ">
+                              <a  href="<?php echo $RS["FACEBOOK"]; ?>" target="_blank">
+                              <span class="bold-font dark-text" style="font-size:2rem;line-height:1">facebook</span></a>
+
+                        </div>
+                        <div class="md-layout md-flex-20 md-flex-small-100 md-align-center md-align-small-start ">
+                                    <a  href="<?php echo $RS["INSTAGRAM"]; ?>" target="_blank">
+                              <span class="bold-font dark-text" style="font-size:2rem;line-height:1">instagram</span>
+                              </a>
+                        </div>
+                        <div class="md-layout md-flex-10 md-flex-small-100 md-align-center md-align-small-start ">
+                                    <a href="<?php echo $RS["LINKEDIN"]; ?>" target="_blank" >
+                              <span class="bold-font dark-text" style="font-size:2rem;line-height:1;">linkedin</span>
+                        </a>
+                        </div>
+                    
+
+
+                  </div>
+            </div>
+      </div>
+      <div class="contact-text-container">
+           <p>Jr Monterrey 389,</p><p>Chacarilla del Estanque,</p> <p>Surco-Lima, Perú.</p>
+           <br>
+           <p class="bold-font">+51 13720253</p>
+            <p class="bold-font">+51 12670507</p>
+      </div>
+      <?php require $this->checkTemplate("template/footer");?>
+</div>
